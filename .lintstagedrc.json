@@ -1,0 +1,5 @@
+{
+  "*.json": [
+    "npm run lint:staged:fix"
+  ]
+}

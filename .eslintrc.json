@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "overrides": [
+    {
+      "files": [
+        "*.json"
+      ],
+      "plugins": [
+        "json-format"
+      ],
+      "settings": {
+        "json/json-with-comments-files": [],
+        "json/sort-package-json": [
+          "$schema",
+          "name",
+          "version",
+          "description",
+          "repository",
+          "author",
+          "contributors",
+          "license",
+          "private",
+          "engines",
+          "workspaces",
+          "scripts",
+          "files",
+          "main",
+          "module",
+          "types",
+          "exports",
+          "dependencies",
+          "peerDependencies",
+          "devDependencies"
+        ]
+      }
+    }
+  ]
+}

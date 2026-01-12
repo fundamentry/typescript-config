@@ -1,0 +1,41 @@
+name: Check
+
+on:
+  workflow_call:
+  pull_request:
+    branches:
+      - main
+
+env:
+  HUSKY: 0
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://npm.pkg.github.com
+          cache: pnpm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Audit dependencies
+        run: pnpm audit -prod --audit-level=moderate
+
+      - name: Lint project
+        run: pnpm lint

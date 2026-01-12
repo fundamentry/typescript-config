@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@fundamentry/typescript-config",
+  "version": "1.0.2",
+  "description": "Shareable and extensible TypeScript configurations.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fundamentry/typescript-config.git"
+  },
+  "contributors": [
+    {
+      "name": "Alexander Zakharov (azaxarov)",
+      "email": "alexander.zakharov@fundamentry.org"
+    }
+  ],
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "commit": "cz",
+    "lint": "run-p lint:eslint",
+    "lint:eslint": "eslint --ext json .",
+    "lint:eslint:fix": "eslint --ext json . --fix",
+    "lint:eslint:staged:fix": "eslint --ext json . --fix",
+    "lint:fix": "run-p lint:eslint:fix",
+    "lint:staged:fix": "run-p lint:eslint:staged:fix -- {@}",
+    "prepare": "husky",
+    "prepublishOnly": "cp -R src/*.json ."
+  },
+  "files": [
+    "common.json",
+    "node.json",
+    "browser.json",
+    "react.json"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "npm-run-all": "^4.1.5",
+    "semantic-release": "^25.0.2"
+  }
+}
