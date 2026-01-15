@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@fundamentry/typescript-config",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Shareable and extensible TypeScript configurations.",
   "repository": {
     "type": "git",
