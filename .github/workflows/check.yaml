@@ -29,7 +29,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
           cache: pnpm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.FUNDAMENTRY_BOT_TOKEN }}
 
       - name: Install dependencies
         run: pnpm i
