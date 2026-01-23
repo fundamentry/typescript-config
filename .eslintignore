@@ -7,11 +7,6 @@
 lib
 node_modules
 
-.gitignore
-.eslintignore
-.npmrc
-
-LICENSE
 README.md
 
 !.*.json
