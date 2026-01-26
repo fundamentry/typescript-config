@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   HUSKY: 0
 

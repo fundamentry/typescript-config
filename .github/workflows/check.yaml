@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   HUSKY: 0
 
