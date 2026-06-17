@@ -17,6 +17,12 @@
     "node": ">=24",
     "pnpm": ">=10"
   },
+  "files": [
+    "common.json",
+    "node.json",
+    "browser.json",
+    "react.json"
+  ],
   "scripts": {
     "commit": "cz",
     "lint": "run-p lint:eslint",
@@ -28,15 +34,10 @@
     "prepare": "husky",
     "prepublishOnly": "cp -R src/*.json ."
   },
-  "files": [
-    "common.json",
-    "node.json",
-    "browser.json",
-    "react.json"
-  ],
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
+    "@fundamentry/eslint-config-json": "1.3.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.3.0",

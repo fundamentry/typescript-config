@@ -14,6 +14,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^20.3.1
         version: 20.3.1
+      '@fundamentry/eslint-config-json':
+        specifier: 1.3.0
+        version: 1.3.0(eslint-plugin-json-format@2.0.1(eslint@8.57.1))(eslint@8.57.1)
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@25.0.2(typescript@5.9.3))
@@ -173,6 +176,13 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+  '@fundamentry/eslint-config-json@1.3.0':
+    resolution: {integrity: sha512-8ckLYpaceZD0gQXJuLK8Cpnbs8c/cUzxUiN84YZMkZCXLeVMHYNwpXV00LCMfCfKri6X0BUYOSniPTOSNMyzrg==, tarball: https://npm.pkg.github.com/download/@fundamentry/eslint-config-json/1.3.0/b31da39107e12fb7ce8b4e820dd301ca4b4aaf79}
+    engines: {node: '>=24', pnpm: '>=11'}
+    peerDependencies:
+      eslint: 8.57.1
+      eslint-plugin-json-format: 2.0.1
+
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
     engines: {node: '>=10.10.0'}
@@ -331,6 +341,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   JSONStream@1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}
@@ -2788,6 +2799,11 @@ snapshots:
   '@eslint/js@8.57.1': {}
 
   '@fastify/busboy@2.1.1': {}
+
+  '@fundamentry/eslint-config-json@1.3.0(eslint-plugin-json-format@2.0.1(eslint@8.57.1))(eslint@8.57.1)':
+    dependencies:
+      eslint: 8.57.1
+      eslint-plugin-json-format: 2.0.1(eslint@8.57.1)
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:

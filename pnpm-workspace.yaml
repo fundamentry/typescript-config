@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - '@fundamentry/eslint-config-json@1.3.0'
