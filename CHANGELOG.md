@@ -1,3 +1,5 @@
+# [2.0.0](https://github.com/fundamentry/typescript-config/compare/1.0.0...2.0.0) (2026-06-17)
+
 # 1.0.0 (2026-01-15)
 
 
