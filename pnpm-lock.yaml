@@ -50,6 +50,9 @@ importers:
       semantic-release:
         specifier: 25.0.5
         version: 25.0.5(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
 
 packages:
 
